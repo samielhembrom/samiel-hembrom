@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom ducument</title>
+</head>
+<body>
+  <p> clik the button to open a new window and add some content.</p>
+  <button onclick="myFuntion()">try it</button>
+
+    <script>
+         function myFuntion(){
+            var w =window.open();
+            w.document.open();
+            w.document.write("<h2> hello world!</h2>");
+            w.document.close();
+         }
+      
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Java Script</title>
+</head>
+<body>
+    <script>
+
+function displayTime(){
+    var dateTime = new Date();
+    var hrs = dateTime.getHours();
+    var min = dateTime.getMinutes();
+    var sec = dateTime.getSeconds();
+    var session = document.getElementById('session');
+
+    if(hrs >= 12){
+        session.innerHTML = 'PM';
+    }else{
+        session.innerHTML = 'AM';
+    }
+
+    if(hrs > 12){
+        hrs = hrs - 12;
+    }
+
+    document.getElementById('hours').innerHTML = hrs;
+    document.getElementById('minutes').innerHTML = min;
+    document.getElementById('seconds').innerHTML = sec;
+}
+    setInterval(displayTime, 1000);
+
+    </script>
+</body>
+</html>
